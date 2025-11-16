@@ -19,6 +19,11 @@ except ImportError:
     print("This script requires the 'requests' library. Install with: pip install requests")
     sys.exit(1)
 
+try:
+    import threading
+except ImportError:
+    print("This script requires the 'threading' module, which is part of the Python standard library.")
+    sys.exit(1)
 
 def parse_headers(header_list):
         headers = {}
